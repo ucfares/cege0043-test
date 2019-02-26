@@ -3,7 +3,7 @@ function callDivChange() {
 	xhr= new XMLHttpRequest();
 	xhr.open("GET", "test.html",true);
 	xhr.onreadystatechange= processDivChange;
-	xhr.send()
+	xhr.send();
 }
 function processDivChange() {
 	if (xhr.readystate <4) // while waiting for a response from server
