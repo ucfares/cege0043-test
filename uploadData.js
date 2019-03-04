@@ -3,7 +3,8 @@ function startDataUpload() {
 	var surname =document.getElementById("surname").value;
 	var moduleName =document.getElementById("moduleName").value;
 	var postString ="name="+name +"&surname="+surname+"&moduleName="+moduleName; 
-	alert (postString); 
+	alert (postString);
+	processData(postString);  
 }
 var client: // the global variable that holds the request
 function processData(postString) {
