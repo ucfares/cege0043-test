@@ -1,4 +1,3 @@
-//create a POST String with the data
 function startDataUpload(){
 	//get the textbox values
 	var name = document.getElementById("name").value;
@@ -26,7 +25,10 @@ function startDataUpload(){
 	//get the select box value
 	var language = document.getElementById("languageselectbox").value;
 	postString = postString+"&language="+language;
-	
+	//get the values for the coordinate information
+	var latitude = document.getElementById("latitude").value;
+	var longitude = document.getElementById("longitude").value;
+	postString = postString+"&latitude="+latitude+"&longitude="+longitude;
 	//return an alert to check this has worked
 	alert(postString);
 	//call the processing function
