@@ -4,31 +4,31 @@ function startDataUpload(){
 	var surname = document.getElementById("surname").value;
 	var moduletitle = document.getElementById("module").value;
 	//plave the values in a POST string to send to the server
-	var postString = "name="+name+"&surname="+surname+"&module="+moduletitle;
+	var postString = "name=" + " " +name+ "& surname=" + " " +surname+ "&module=" + " " +moduletitle;
 	//get the checkbox values
-	var checkString = "";
+	var checkString = " ";
 	//loop for all boxes
 	for (var i = 1;i < 5;i++){
 		if (document.getElementById("check"+i).checked == true){
-			checkString = checkString + document.getElementById("check"+i).value+"||"
+			checkString = checkString + document.getElementById("check"+i).value+","
 		}
 	}
 	//add the new checkbox values to the original POST string
-	postString = postString+"&modulelist="+checkString;
+	postString = postString+ " " + "& module list=" + " " +checkString;
 	//get the radio button value depending on whether the morning or afternoon option is checked
 	if (document.getElementById("morning").checked){
-		postString = postString+"&lecturetime=morning";
+		postString = postString+ " " + "& lecturetime = morning";
 	}
 	if (document.getElementById("afternoon").checked){
-		postString = postString+"&lecturetime=afternoon";
+		postString = postString+ " " + "& lecturetime= afternoon";
 	}
 	//get the select box value
 	var language = document.getElementById("languageselectbox").value;
-	postString = postString+"&language="+language;
+	postString = postString+ " " + "& language=" + " " +language;
 	//get the values for the coordinate information
 	var latitude = document.getElementById("latitude").value;
 	var longitude = document.getElementById("longitude").value;
-	postString = postString+"&latitude="+latitude+"&longitude="+longitude;
+	postString = postString+ "  " + "& latitude=" + " " latitude+ " " +"& longitude=" + " " +longitude;
 	//return an alert to check this has worked
 	alert(postString);
 	//call the processing function
